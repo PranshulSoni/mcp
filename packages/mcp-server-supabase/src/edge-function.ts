@@ -36,6 +36,7 @@ export function normalizeFilename({
   const pathPrefix = getPathPrefix(deploymentId);
 
   // Deno 2 uses relative filenames, Deno 1 uses absolute. Resolve both to absolute first.
+  // Resolve Deno paths the same way on Windows.
   const filenameAbsolute = resolve(pathPrefix, filename);
 
   // Strip prefix(es)

@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { normalizeFilename } from './edge-function.js';
 
-// The deployment paths use POSIX separators even when the server runs on Windows.
 describe('normalizeFilename', () => {
   it('handles deno 1 paths', () => {
     const result = normalizeFilename({
